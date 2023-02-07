@@ -1,0 +1,44 @@
+.about {
+   min-height: calc(var(--doc-height) - 80px);
+   &__body {
+      display: flex;
+      align-items: center;
+      height:var(--doc-height);
+   }
+   @media only screen and (max-width:$mobile) {
+      &__body {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-evenly;
+      }
+   }
+   &__description {
+      height: 400px;
+      padding: 0 50px 0 10px;
+   }
+   @media only screen and (max-width:$mobile) {
+      &__description {
+         height: auto;
+         padding: 0 0px 50px 10px;
+      }
+   }
+   &__title {
+      padding-bottom: 20px;
+   }
+   &__img-wrapper {
+   margin: auto;
+   }
+   &__img {
+      min-width: 400px;
+      min-height: 400px;
+      position: relative;
+   }
+   &__img img{
+      position: absolute;
+      top: 0;left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+

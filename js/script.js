@@ -51,3 +51,14 @@ const documentHeight = () => {
 }
 window.addEventListener('resize', documentHeight)
 documentHeight()
+
+//smooth scroll <=>
+window.addEventListener('scroll', e => {
+   document.documentElement.style.setProperty('--scrollTop', `${this.scrollY}px`) // Update method
+})
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+ScrollSmoother.create({
+   wrapper: '.smooth-wrapper',
+   content: '.smooth-content',
+   smooth: 0.7,
+})

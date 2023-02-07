@@ -1,15 +1,19 @@
 // import fonts/font <=>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
-
 @font-face {
-   font-family: kooka_f;
-   src: url(../fonts/FontsFree-Net-Kooka-Regular.ttf);
+   font-family: ferry;
+   src: url(../fonts/Ferry/2717-font.otf);
+}
+@font-face {
+   font-family: gildoy;
+   src: url(../fonts/Gilroy/Gilroy-ExtraBold.otf);
 }
 
 // default font / default font size <=>
-$fontFamily: "kooka_f";
-$fontFamilyTitle: "kooka_f";
-$fontSize: 16;
+$fontFamily: "gildoy";
+$fontFamilyBlack: "ferry";
+$fontFamilyVintage: "";
+
+$fontSize: 20;
 
 // base colors <=>
 $black: #0c0c0f;
@@ -45,11 +49,9 @@ body {
    color: $white;
    min-height: -webkit-fill-available;
    height: var(--doc-height);
-   caret-color: $mainColor1;
    line-height: 1.01;
    font-family: $fontFamily;
    font-size: $fontSize + px;
-   font-size: 40px;
    //scroll block when open burger
    .lock & {
       overflow: hidden;
@@ -76,42 +78,29 @@ body {
 
 // the footer to the bottom of the page <=>
 main {
+   padding-top: 80px;
    flex: 1 1 auto;
 }
 
 // title  <=>
 .title {
-   font-weight: 800;
-   font-size: 40px;
-   line-height: 40px;
-   transform: translatey(-10px);
-   opacity: 0;
-   transition: .5s;
+   font-family: $fontFamilyBlack;
+   font-size: 30px;
 }
 .title[data-scroll="in"]{
-   transform: translatey(0px);
-   opacity: 1;
 }
 
 // text  <=>
 .text {
-   transform: translatey(-10px);
-   opacity: 0;
-   transition: .5s;
-   transition-delay: .2s;
+   opacity: .9;
 }
 .text[data-scroll="in"]{
-   transform: translatey(0px);
-   opacity: 1;
 }
 
 // block  <=>
 .block {
-   opacity: .3;
-   transition: .5s;
 }
 .block[data-scroll="in"]{
-   opacity: 1;
 }
 
 // scroll bar <=>
@@ -210,7 +199,71 @@ main {
    }
 }
 
+//noice effect <=>
+.old {
+   filter:sepia(1);
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-image: url('https://www.cinecasero.uy/img/old.webp');
+   opacity: .05;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   z-index: 300;
+   pointer-events: none;
+}
+.noise {
+   animation: grain 6s steps(10) infinite;
+   background-image: url('https://www.cinecasero.uy/img/noise-full.png');
+   background-repeat: repeat;
+   height: 300%;
+   left: -50%;
+   opacity: .035;
+   position: fixed;
+   top: -100%;
+   width: 300%;
+   z-index:200;
+   pointer-events: none;
+}
+@keyframes grain {
+   0%, 100% {
+     transform: translate(0, 0);
+ }
+ 10% {
+     transform: translate(-5%, -10%);
+ }
+ 20% {
+     transform: translate(-15%, 5%);
+ }
+ 30% {
+     transform: translate(7%, -25%);
+ }
+ 40% {
+     transform: translate(-5%, 25%);
+ }
+ 50% {
+     transform: translate(-15%, 10%);
+ }
+ 60% {
+     transform: translate(15%, 0%);
+ }
+ 70% {
+     transform: translate(0%, 15%);
+ }
+ 80% {
+     transform: translate(3%, 35%);
+ }
+ 90% {
+     transform: translate(-10%, 10%);
+ }
+}
+
 //import scss modules<=>
 @import "_header.scss";
 @import "_footer.scss";
-@import "_not-found.scss";
+@import "_about.scss";

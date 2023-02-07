@@ -31,6 +31,9 @@
    <!-- style css -->
    <link rel="stylesheet" href="css/style.css">
    <!-- javascript code -->
+   <script src="libs/gsap/gsap.min.js" defer></script>
+   <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+   <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
    <script defer src="./js/lightbox-plus-jquery.js"></script>
    <script defer src="js/script.js"></script>
    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -41,6 +44,10 @@
 
 <body>
    <div class="wrapper">
+
+      <!-- noice effect-->
+      <div class="noise"></div>
+      <div class="old"></div>
 
       <!-- loading page -->
       <div class="loader" id="loader">
@@ -72,45 +79,40 @@
       </header>
 
       <!--main-->
-      <main class="main">
-         <section style="height: 100vh;">
+      <div class="smooth-wrapper">
+         <div class="smooth-content">
+            <main class="main">
+               <section class="about">
+                  <div class="container">
+                     <div class="about__body">
+                        <div class="about__description">
+                           <div class="about__title title">Hi! my name is Cipi</div>
+                           <div class="about__text text">
+                              I made ... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates laudantium
+                              illo quo quae sed autem rem nulla eum tempora inventore? Architecto praesentium expedita
+                              perspiciatis, impedit iusto officiis voluptate dignissimos placeat.
+                           </div>
+                        </div>
+                        <div class="about__img-wrapper">
+                           <div class="about__img">
+                              <img src="img/killing.jpg" alt="">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
 
-         </section>
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt facilis nobis, temporibus voluptatum
-         voluptas reiciendis cum doloribus officia ut repellendus alias tempore aliquid in! Obcaecati sint cupiditate
-         nesciunt nihil.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt facilis nobis, temporibus voluptatum
-         voluptas reiciendis cum doloribus officia ut repellendus alias tempore aliquid in! Obcaecati sint cupiditate
-         nesciunt nihil.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt facilis nobis, temporibus voluptatum
-         voluptas reiciendis cum doloribus officia ut repellendus alias tempore aliquid in! Obcaecati sint cupiditate
-         nesciunt nihil.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt facilis nobis, temporibus voluptatum
-         voluptas reiciendis cum doloribus officia ut repellendus alias tempore aliquid in! Obcaecati sint cupiditate
-         nesciunt nihil.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt facilis nobis, temporibus voluptatum
-         voluptas reiciendis cum doloribus officia ut repellendus alias tempore aliquid in! Obcaecati sint cupiditate
-         nesciunt nihil.Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt facilis nobis,
-         temporibus voluptatum
-         voluptas reiciendis cum doloribus officia ut repellendus alias tempore aliquid in! Obcaecati sint cupiditate
-         nesciunt nihil.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt facilis nobis, temporibus voluptatum
-         voluptas reiciendis cum doloribus officia ut repellendus alias tempore aliquid in! Obcaecati sint cupiditate
-         nesciunt nihil.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt facilis nobis, temporibus voluptatum
-         voluptas reiciendis cum doloribus officia ut repellendus alias tempore aliquid in! Obcaecati sint cupiditate
-         nesciunt nihil.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt facilis nobis, temporibus voluptatum
-         voluptas reiciendis cum doloribus officia ut repellendus alias tempore aliquid in! Obcaecati sint cupiditate
-         nesciunt nihil.
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sunt facilis nobis, temporibus voluptatum
-         voluptas reiciendis cum doloribus officia ut repellendus alias tempore aliquid in! Obcaecati sint cupiditate
-         nesciunt nihil.
-      </main>
+               <section style="height: 100vh; background: #000;">
 
-      <!-- footer -->
-      <footer class="footer">
-      </footer>
+               </section>
+            </main>
+
+            <!-- footer -->
+            <footer class="footer">
+            </footer>
+
+         </div>
+      </div>
 
    </div>
 </body>
