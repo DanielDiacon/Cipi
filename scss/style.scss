@@ -1,0 +1,216 @@
+// import fonts/font <=>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
+
+@font-face {
+   font-family: kooka_f;
+   src: url(../fonts/FontsFree-Net-Kooka-Regular.ttf);
+}
+
+// default font / default font size <=>
+$fontFamily: "kooka_f";
+$fontFamilyTitle: "kooka_f";
+$fontSize: 16;
+
+// base colors <=>
+$black: #0c0c0f;
+$white: #e1e1e5;
+$mainColor1: #0E0F11;
+
+
+// effects <=>
+$trasCube: 0.68, -0.55, 0.265, 1.55;
+
+
+//100vh mobile problem <=>
+:root {
+   --doc-height: 100%;
+}
+
+// max width for container <=>
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1250;
+
+// size gadjes for adapted and other <=>
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+// null style <=>
+@import "_null.scss";
+
+// general style <=>
+body {
+   background: $black;
+   color: $white;
+   min-height: -webkit-fill-available;
+   height: var(--doc-height);
+   caret-color: $mainColor1;
+   line-height: 1.01;
+   font-family: $fontFamily;
+   font-size: $fontSize + px;
+   font-size: 40px;
+   //scroll block when open burger
+   .lock & {
+      overflow: hidden;
+      touch-action: none;
+   }
+}
+// wrapper <=>
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+
+// container <=>
+.container {
+   max-width: $maxWidthContainer + px;
+   margin: 0 auto;
+   //fix for slider
+   > * {
+      min-width: 0;
+   }
+}
+
+// the footer to the bottom of the page <=>
+main {
+   flex: 1 1 auto;
+}
+
+// title  <=>
+.title {
+   font-weight: 800;
+   font-size: 40px;
+   line-height: 40px;
+   transform: translatey(-10px);
+   opacity: 0;
+   transition: .5s;
+}
+.title[data-scroll="in"]{
+   transform: translatey(0px);
+   opacity: 1;
+}
+
+// text  <=>
+.text {
+   transform: translatey(-10px);
+   opacity: 0;
+   transition: .5s;
+   transition-delay: .2s;
+}
+.text[data-scroll="in"]{
+   transform: translatey(0px);
+   opacity: 1;
+}
+
+// block  <=>
+.block {
+   opacity: .3;
+   transition: .5s;
+}
+.block[data-scroll="in"]{
+   opacity: 1;
+}
+
+// scroll bar <=>
+@media only screen and (max-width:$mobile) {
+   ::-webkit-scrollbar {
+      display: none;
+   }
+}
+::-webkit-scrollbar {
+   width: 14px;
+}
+::-webkit-scrollbar-track {
+   background-color: $black;
+}
+::-webkit-scrollbar-thumb {
+   border-radius: 16px;
+   background-color: $white;
+}
+::-webkit-scrollbar-thumb:active {
+   background-color: #8f8f8f;
+}
+::-webkit-scrollbar-button {
+   display: none;
+}
+
+// when copu text<=>
+::selection {
+   color: $black;
+   background: $white;
+}
+
+//loading page style<=>
+.loader{
+   z-index: 200;
+   position: absolute;
+   width: 100%;
+   height: 100vh; 
+   background: $black;
+   transition: .5s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.spinner {
+   width: 56px;
+   height: 56px;
+   border-radius: 50%;
+   border: 9px solid $white;
+   animation: spinner-bulqg1 0.8s infinite linear alternate,
+        spinner-oaa3wk 1.6s infinite linear;
+}
+@keyframes spinner-bulqg1 {
+   0% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+   }
+
+   12.5% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+   }
+
+   25% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+   }
+
+   50% {
+      clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+   }
+
+   62.5% {
+      clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+   }
+
+   75% {
+      clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
+   }
+
+   100% {
+      clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+   }
+}
+@keyframes spinner-oaa3wk {
+   0% {
+      transform: scaleY(1) rotate(0deg);
+   }
+
+   49.99% {
+      transform: scaleY(1) rotate(135deg);
+   }
+
+   50% {
+      transform: scaleY(-1) rotate(0deg);
+   }
+
+   100% {
+      transform: scaleY(-1) rotate(-135deg);
+   }
+}
+
+//import scss modules<=>
+@import "_header.scss";
+@import "_footer.scss";
+@import "_not-found.scss";
