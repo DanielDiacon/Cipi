@@ -91,8 +91,7 @@ body {
   caret-color: #0E0F11;
   line-height: 1.01;
   font-family: "kooka_f";
-  font-size: 16px;
-  font-size: 40px;
+  font-size: 20px;
 }
 .lock body {
   overflow: hidden;
@@ -353,6 +352,9 @@ main {
   padding: 0 10px;
   height: 70px;
   padding-bottom: 7px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 30px;
 }
 .menu__link {
   color: #e1e1e5;
