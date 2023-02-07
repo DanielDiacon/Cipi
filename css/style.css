@@ -357,7 +357,7 @@ main {
   font-size: 30px;
 }
 .menu__link {
-  color: red;
+  color: #e1e1e5;
 }
 
 @media (max-width: 767px) {
