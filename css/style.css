@@ -348,6 +348,7 @@ main {
   display: none;
 }
 .menu__list {
+  margin-right: 10px;
   display: flex;
   align-items: center;
 }
@@ -434,6 +435,25 @@ main {
     text-align: center;
   }
 }
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+.footer__links {
+  display: flex;
+  gap: 10px;
+}
+.footer__link {
+  color: #e1e1e5;
+  transition: 0.2s;
+  border-bottom: 4px solid transparent;
+}
+.footer__link:hover {
+  border-bottom: 4px solid #e1e1e5;
+  letter-spacing: 1px;
+}
+
 .about {
   min-height: calc(100svh - 80px);
   height: calc(100svh - 80px);

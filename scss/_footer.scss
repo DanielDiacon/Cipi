@@ -1,0 +1,22 @@
+.footer {
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 20px;
+   }
+   &__links {
+      display: flex;
+      gap: 10px;
+   }
+   &__link {
+      color: $white;
+      transition: .2s ;
+      border-bottom:4px solid transparent ;
+   }
+   &__link:hover{
+      border-bottom:4px solid $white ;
+      letter-spacing: 1px;
+   }
+
+}
