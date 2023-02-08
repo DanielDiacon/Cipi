@@ -124,9 +124,19 @@ main {
   font-family: "ferry";
   font-size: 30px;
 }
+@media only screen and (max-width: 767.98px) {
+  .title {
+    font-size: 25px;
+  }
+}
 
 .text {
   opacity: 0.9;
+}
+@media only screen and (max-width: 767.98px) {
+  .text {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -182,39 +192,7 @@ main {
   height: 56px;
   border-radius: 50%;
   border: 9px solid #e1e1e5;
-  -webkit-animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;
-          animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;
-}
-
-@-webkit-keyframes spinner-bulqg1 {
-  0% {
-    -webkit-clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
-            clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
-  }
-  12.5% {
-    -webkit-clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
-            clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
-  }
-  25% {
-    -webkit-clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
-            clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
-  }
-  50% {
-    -webkit-clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
-            clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
-  }
-  62.5% {
-    -webkit-clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
-            clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
-  }
-  75% {
-    -webkit-clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
-            clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
-  }
-  100% {
-    -webkit-clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
-            clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
-  }
+  animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;
 }
 
 @keyframes spinner-bulqg1 {
@@ -247,20 +225,6 @@ main {
             clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
   }
 }
-@-webkit-keyframes spinner-oaa3wk {
-  0% {
-    transform: scaleY(1) rotate(0deg);
-  }
-  49.99% {
-    transform: scaleY(1) rotate(135deg);
-  }
-  50% {
-    transform: scaleY(-1) rotate(0deg);
-  }
-  100% {
-    transform: scaleY(-1) rotate(-135deg);
-  }
-}
 @keyframes spinner-oaa3wk {
   0% {
     transform: scaleY(1) rotate(0deg);
@@ -284,7 +248,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("https://www.cinecasero.uy/img/old.webp");
+  background-image: url(../img/old-noice-effect/old.webp);
   opacity: 0.05;
   background-repeat: no-repeat;
   background-size: cover;
@@ -294,9 +258,8 @@ main {
 }
 
 .noise {
-  -webkit-animation: grain 6s steps(10) infinite;
-          animation: grain 6s steps(10) infinite;
-  background-image: url("https://www.cinecasero.uy/img/noise-full.png");
+  animation: grain 6s steps(10) infinite;
+  background-image: url(../img/old-noice-effect/noise-full.png);
   background-repeat: repeat;
   height: 300%;
   left: -50%;
@@ -306,39 +269,6 @@ main {
   width: 300%;
   z-index: 200;
   pointer-events: none;
-}
-
-@-webkit-keyframes grain {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  10% {
-    transform: translate(-5%, -10%);
-  }
-  20% {
-    transform: translate(-15%, 5%);
-  }
-  30% {
-    transform: translate(7%, -25%);
-  }
-  40% {
-    transform: translate(-5%, 25%);
-  }
-  50% {
-    transform: translate(-15%, 10%);
-  }
-  60% {
-    transform: translate(15%, 0%);
-  }
-  70% {
-    transform: translate(0%, 15%);
-  }
-  80% {
-    transform: translate(3%, 35%);
-  }
-  90% {
-    transform: translate(-10%, 10%);
-  }
 }
 
 @keyframes grain {
@@ -505,39 +435,26 @@ main {
   }
 }
 .about {
-  min-height: calc(var(--doc-height) - 80px);
+  min-height: calc(100svh - 80px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 .about__body {
   display: flex;
   align-items: center;
-  height: var(--doc-height);
-}
-@media only screen and (max-width: 767.98px) {
-  .about__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
+  gap: 50px;
 }
 .about__description {
   height: 400px;
-  padding: 0 50px 0 10px;
-}
-@media only screen and (max-width: 767.98px) {
-  .about__description {
-    height: auto;
-    padding: 0 0px 50px 10px;
-  }
+  padding: 20px;
 }
 .about__title {
   padding-bottom: 20px;
 }
-.about__img-wrapper {
-  margin: auto;
-}
 .about__img {
-  min-width: 400px;
-  min-height: 400px;
+  height: 400px;
+  width: 400px;
   position: relative;
 }
 .about__img img {
@@ -548,4 +465,397 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.about__img_1 {
+  z-index: 2;
+  animation: CTA-glitch 5s infinite step-end;
+}
+
+@media screen and (max-width: 767.98px) and (max-width: 991.98px) {
+  .about__body {
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 40px;
+  }
+  .about__description {
+    height: auto;
+  }
+  .about__title {
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .about__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 25px;
+  }
+  .about__description {
+    height: auto;
+    padding: 30px;
+    margin-top: -50px;
+  }
+  .about__title {
+    padding-bottom: 20px;
+  }
+  .about__img {
+    height: 300px;
+    width: 300px;
+    position: relative;
+  }
+}
+@keyframes CTA-glitch {
+  10% {
+    clip: rect(438px, 9999px, 459px, 0);
+    left: -4%;
+  }
+  10.5% {
+    clip: rect(279px, 9999px, 294px, 0);
+    left: -4%;
+  }
+  11% {
+    clip: rect(448px, 9999px, 449px, 0);
+    left: -4%;
+  }
+  11.5% {
+    clip: rect(301px, 9999px, 345px, 0);
+    left: -2%;
+  }
+  12% {
+    clip: rect(466px, 9999px, 526px, 0);
+    left: -1%;
+  }
+  12.5% {
+    clip: rect(263px, 9999px, 296px, 0);
+    left: -4%;
+  }
+  13% {
+    clip: rect(174px, 9999px, 268px, 0);
+    left: 4%;
+  }
+  13.5% {
+    clip: rect(100px, 9999px, 167px, 0);
+    left: 2%;
+  }
+  14% {
+    clip: rect(308px, 9999px, 311px, 0);
+    left: 5%;
+  }
+  14.5% {
+    clip: rect(131px, 9999px, 147px, 0);
+    left: -1%;
+  }
+  15% {
+    clip: rect(54px, 9999px, 92px, 0);
+    left: -1%;
+  }
+  15.5% {
+    clip: rect(341px, 9999px, 421px, 0);
+    left: 3%;
+  }
+  16% {
+    clip: rect(354px, 9999px, 394px, 0);
+    left: 5%;
+  }
+  16.5% {
+    clip: rect(260px, 9999px, 360px, 0);
+    left: -1%;
+  }
+  17% {
+    clip: rect(9px, 9999px, 29px, 0);
+    left: 1%;
+  }
+  17.5% {
+    clip: rect(264px, 9999px, 322px, 0);
+    left: 0%;
+  }
+  18% {
+    clip: rect(51px, 9999px, 142px, 0);
+    left: -1%;
+  }
+  18.5% {
+    clip: rect(105px, 9999px, 151px, 0);
+    left: -4%;
+  }
+  19% {
+    clip: rect(204px, 9999px, 237px, 0);
+    left: -4%;
+  }
+  19.5% {
+    clip: rect(298px, 9999px, 317px, 0);
+    left: 5%;
+  }
+  20% {
+    clip: rect(60px, 9999px, 60px, 0);
+  }
+  20.5% {
+    clip: rect(438px, 9999px, 459px, 0);
+    left: -4%;
+  }
+  21% {
+    clip: rect(279px, 9999px, 294px, 0);
+    left: -4%;
+  }
+  21.5% {
+    clip: rect(448px, 9999px, 449px, 0);
+    left: -4%;
+  }
+  22% {
+    clip: rect(301px, 9999px, 345px, 0);
+    left: -2%;
+  }
+  22.5% {
+    clip: rect(466px, 9999px, 526px, 0);
+    left: -1%;
+  }
+  23% {
+    clip: rect(263px, 9999px, 296px, 0);
+    left: -4%;
+  }
+  23.5% {
+    clip: rect(174px, 9999px, 268px, 0);
+    left: 4%;
+  }
+  24% {
+    clip: rect(100px, 9999px, 167px, 0);
+    left: 2%;
+  }
+  24.5% {
+    clip: rect(308px, 9999px, 311px, 0);
+    left: 5%;
+  }
+  25% {
+    clip: rect(131px, 9999px, 147px, 0);
+    left: -1%;
+  }
+  25.5% {
+    clip: rect(54px, 9999px, 92px, 0);
+    left: -1%;
+  }
+  26% {
+    clip: rect(341px, 9999px, 421px, 0);
+    left: 3%;
+  }
+  26.5% {
+    clip: rect(354px, 9999px, 394px, 0);
+    left: 5%;
+  }
+  27% {
+    clip: rect(204px, 9999px, 254px, 0);
+    left: -1%;
+    visibility: hidden;
+  }
+  43.5% {
+    opacity: 0.5;
+    clip: auto;
+    visibility: visible;
+    left: -10px;
+  }
+  44% {
+    clip: rect(135px, 999px, 260px, 0px);
+    left: -15px;
+  }
+  44.5% {
+    clip: rect(135px, 999px, 260px, 0px);
+    left: 0;
+  }
+  45% {
+    clip: auto;
+    left: -20px;
+    -webkit-filter: hue-rotate(90deg) saturate(1.3);
+  }
+  45.5% {
+    left: 0px;
+    -webkit-filter: invert(1);
+  }
+  46% {
+    clip: rect(308px, 9999px, 311px, 0);
+    left: 15%;
+  }
+  46.5% {
+    clip: rect(131px, 9999px, 147px, 0);
+    left: -11%;
+    transform: scale(1.1);
+  }
+  47% {
+    clip: rect(54px, 9999px, 92px, 0);
+    left: -11%;
+    transform: scale(1.2);
+  }
+  47.5% {
+    clip: rect(341px, 9999px, 421px, 0);
+    left: 13%;
+    transform: scale(1.3);
+    -webkit-filter: invert(0);
+  }
+  48% {
+    clip: rect(354px, 9999px, 394px, 0);
+    left: 15%;
+    transform: scale(1.1);
+  }
+  48.5% {
+    clip: rect(260px, 9999px, 360px, 0);
+    left: -11%;
+    transform: scale(1.2);
+    -webkit-filter: none;
+  }
+  49% {
+    clip: rect(9px, 9999px, 29px, 0);
+    left: 11%;
+    transform: scale(1.3);
+  }
+  49.5% {
+    clip: rect(264px, 9999px, 322px, 0);
+    left: 0%;
+    transform: scale(1.1);
+  }
+  50% {
+    clip: rect(51px, 9999px, 142px, 0);
+    left: -11%;
+  }
+  50.5% {
+    clip: rect(105px, 9999px, 151px, 0);
+    left: -14%;
+    transform: scale(1.2);
+  }
+  51% {
+    clip: rect(279px, 9999px, 294px, 0);
+    left: -14%;
+  }
+  51.5% {
+    clip: rect(448px, 9999px, 449px, 0);
+    left: -14%;
+  }
+  52% {
+    clip: rect(301px, 9999px, 345px, 0);
+    left: -12%;
+    transform: scale(1.1);
+  }
+  52.5% {
+    clip: rect(466px, 9999px, 526px, 0);
+    left: -11%;
+    transform: scale(1.3);
+    -webkit-filter: hue-rotate(90deg) saturate(1.3);
+  }
+  53% {
+    clip: rect(263px, 9999px, 296px, 0);
+    left: -14%;
+    transform: scale(1.1);
+  }
+  53.5% {
+    clip: rect(174px, 9999px, 268px, 0);
+    left: 14%;
+    transform: scale(1.3);
+  }
+  54% {
+    clip: rect(100px, 9999px, 167px, 0);
+    left: 12%;
+    transform: scale(1.1);
+    -webkit-filter: none;
+  }
+  54% {
+    background-image: none;
+  }
+  71% {
+    clip: rect(438px, 9999px, 459px, 0);
+    left: -4%;
+  }
+  71.5% {
+    clip: rect(279px, 9999px, 294px, 0);
+    left: -4%;
+  }
+  72% {
+    clip: rect(448px, 9999px, 449px, 0);
+    left: -4%;
+  }
+  72.5% {
+    clip: rect(301px, 9999px, 345px, 0);
+    left: -2%;
+  }
+  73% {
+    clip: rect(466px, 9999px, 526px, 0);
+    left: -1%;
+  }
+  73.5% {
+    clip: rect(263px, 9999px, 296px, 0);
+    left: -4%;
+  }
+  74% {
+    clip: rect(174px, 9999px, 268px, 0);
+    left: 4%;
+  }
+  74.5% {
+    clip: rect(100px, 9999px, 167px, 0);
+    left: 2%;
+  }
+  75% {
+    clip: rect(308px, 9999px, 311px, 0);
+    left: 5%;
+  }
+  75.5% {
+    clip: rect(131px, 9999px, 147px, 0);
+    left: -1%;
+  }
+  76% {
+    clip: rect(54px, 9999px, 92px, 0);
+    left: -1%;
+  }
+  76.5% {
+    clip: rect(341px, 9999px, 421px, 0);
+    left: 3%;
+  }
+  77% {
+    clip: rect(354px, 9999px, 394px, 0);
+    left: 5%;
+  }
+  77.5% {
+    clip: rect(260px, 9999px, 360px, 0);
+    left: -1%;
+  }
+  78% {
+    clip: rect(9px, 9999px, 29px, 0);
+    left: 1%;
+  }
+  78.5% {
+    clip: rect(264px, 9999px, 322px, 0);
+    left: 0%;
+  }
+  79% {
+    clip: rect(51px, 9999px, 142px, 0);
+    left: -1%;
+  }
+  79.5% {
+    clip: rect(105px, 9999px, 151px, 0);
+    left: -4%;
+  }
+  80% {
+    clip: rect(204px, 9999px, 237px, 0);
+    left: -4%;
+    background-image: url(https://res.cloudinary.com/dilgjzsjl/image/upload/v1498571436/goldsmiths/joinus.png);
+  }
+  80.5% {
+    clip: rect(298px, 9999px, 317px, 0);
+    left: 5%;
+  }
+  81% {
+    clip: rect(438px, 9999px, 459px, 0);
+    left: -4%;
+  }
+  81.5% {
+    clip: rect(279px, 9999px, 294px, 0);
+    left: -4%;
+  }
+  82% {
+    clip: rect(448px, 9999px, 449px, 0);
+    left: -4%;
+  }
+  82.5% {
+    clip: rect(301px, 9999px, 345px, 0);
+    left: -2%;
+  }
+  83% {
+    clip: none;
+    left: 0;
+  }
 }

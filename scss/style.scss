@@ -86,6 +86,9 @@ main {
 .title {
    font-family: $fontFamilyBlack;
    font-size: 30px;
+   @media only screen and (max-width:$mobile) {
+      font-size: 25px;
+   }
 }
 .title[data-scroll="in"]{
 }
@@ -93,6 +96,9 @@ main {
 // text  <=>
 .text {
    opacity: .9;
+   @media only screen and (max-width:$mobile) {
+      font-size: 16px;
+   }
 }
 .text[data-scroll="in"]{
 }
@@ -209,7 +215,7 @@ main {
    left: 0;
    right: 0;
    bottom: 0;
-   background-image: url('https://www.cinecasero.uy/img/old.webp');
+   background-image: url(../img/old-noice-effect/old.webp);
    opacity: .05;
    background-repeat: no-repeat;
    background-size: cover;
@@ -219,7 +225,7 @@ main {
 }
 .noise {
    animation: grain 6s steps(10) infinite;
-   background-image: url('https://www.cinecasero.uy/img/noise-full.png');
+   background-image: url(../img/old-noice-effect/noise-full.png);
    background-repeat: repeat;
    height: 300%;
    left: -50%;
