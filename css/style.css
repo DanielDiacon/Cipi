@@ -438,7 +438,7 @@ main {
 .footer__body {
   display: flex;
   justify-content: space-between;
-  padding: 30px 20px;
+  padding: 20px;
 }
 .footer__links {
   display: flex;
@@ -452,6 +452,23 @@ main {
 .footer__link:hover {
   border-bottom: 4px solid #e1e1e5;
   letter-spacing: 1px;
+}
+.footer__icon {
+  color: #e1e1e5;
+  transition: 0.2s;
+  display: none;
+  font-size: 25px;
+}
+.footer__link:hover {
+  border-bottom: 4px solid #e1e1e5;
+}
+@media only screen and (max-width: 767.98px) {
+  .footer__link {
+    display: none;
+  }
+  .footer__icon {
+    display: inline-block;
+  }
 }
 
 .about {
@@ -881,4 +898,96 @@ main {
     clip: none;
     left: 0;
   }
+}
+.gallery {
+  padding-bottom: 40px;
+}
+.gallery__title {
+  padding: 20px;
+}
+.gallery__grid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0px;
+}
+@media only screen and (max-width: 991.98px) {
+  .gallery__grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .gallery__grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+}
+.gallery__item_big {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+  z-index: 2;
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.gallery__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.4s;
+}
+.gallery__img_2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.4s;
+}
+.gallery__item:hover .gallery__img_2 {
+  display: block;
+  animation: CTA-glitch 3s infinite step-end;
+}
+.gallery__item_big:hover .gallery__img_2 {
+  display: block;
+  animation: CTA-glitch 3s infinite step-end;
+}
+.gallery .item__zoom {
+  z-index: 2;
+  position: absolute;
+  color: #0c0c0f;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  margin: 5px;
+  padding: 5px;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.3s;
+}
+@media only screen and (max-width: 767.98px) {
+  .gallery .item__zoom {
+    opacity: 1;
+  }
+}
+.gallery__item:hover .item__zoom {
+  opacity: 1;
+  transition: 0.3s;
+}
+.gallery__item_big:hover .item__zoom {
+  opacity: 1;
+  transition: 0.3s;
 }

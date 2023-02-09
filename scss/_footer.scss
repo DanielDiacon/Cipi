@@ -1,9 +1,8 @@
 .footer {
-
    &__body {
       display: flex;
       justify-content: space-between;
-      padding: 30px 20px;
+      padding: 20px;
    }
    &__links {
       display: flex;
@@ -18,5 +17,21 @@
       border-bottom:4px solid $white ;
       letter-spacing: 1px;
    }
-
+   &__icon {
+      color: $white;
+      transition: .2s ;
+      display: none;
+      font-size: 25px;
+   }
+   &__link:hover{
+      border-bottom:4px solid $white ;
+   }
+   @media only screen and (max-width:$mobile) {
+      &__link {
+         display: none;
+      }
+      &__icon {
+         display: inline-block;
+      }
+   }
 }
