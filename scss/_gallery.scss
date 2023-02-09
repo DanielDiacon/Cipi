@@ -1,0 +1,85 @@
+.gallery {
+   padding-bottom: 20px;
+   &__title {
+      padding:20px;
+   }
+   &__grid {
+      padding:20px;
+      display: grid; 
+      grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+      gap: 0px; 
+      @media only screen and (max-width:$tablet) {
+         grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
+      }
+      @media only screen and (max-width:$mobile) {
+         grid-template-columns: repeat(auto-fit , minmax(150px,1fr));
+      }
+   }
+   &__item {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 100%;
+   }
+   &__item_big {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 100%;
+      z-index: 2;
+      grid-row: span 2;
+      grid-column: span 2;
+   }
+   &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      transition: .4s;
+   }
+   &__img_2{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      transition: .4s;
+   }
+   &__item:hover &__img_2{
+      display: block;
+      animation: CTA-glitch 3s infinite step-end;
+   }
+   &__item_big:hover &__img_2{
+      display: block;
+      animation: CTA-glitch 3s infinite step-end;
+   }
+   .item__zoom{
+      z-index:2;
+      position: absolute;
+      color: $black;
+      backdrop-filter: blur(10px) ;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      margin: 5px;
+      padding: 5px;
+      pointer-events: none;
+      opacity: 0;
+      transition: .3s;
+      @media only screen and (max-width:$mobile) {
+         opacity:1;
+      }
+   }
+   &__item:hover .item__zoom{
+      opacity: 1;
+      transition: .3s;
+   }
+   &__item_big:hover .item__zoom{
+      opacity: 1;
+      transition: .3s;
+   }
+   
+}
+
