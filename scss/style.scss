@@ -1,27 +1,16 @@
 // import fonts/font <=>
-@font-face {
-   font-family: ferry;
-   src: url(../fonts/Ferry/2717-font.otf);
-}
-@font-face {
-   font-family: gildoy;
-   src: url(../fonts/Gilroy/Gilroy-ExtraBold.otf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&display=swap');
 
 // default font / default font size <=>
-$fontFamily: "gildoy";
-$fontFamilyBlack: "ferry";
-$fontSize: 20;
+$fontFamily: 'Unbounded', cursive;
+$fontFamilyLogo: "Montserrat", sans-serif;
+$fontSize: 14;
 
 // base colors <=>
-$black: #0c0c0f;
-$white: #e1e1e5;
-$mainColor1: #0E0F11;
-
-// max width for container <=>
-$minWidth: 320;
-$maxWidth: 1920;
-$maxWidthContainer: 1250;
+$black: #101014;
+$white: #f0ebeb;
+$mainColor: #FFFD00;
 
 // size gadjes for adapted and other <=>
 $tablet: 991.98px;
@@ -33,86 +22,62 @@ $mobileSmall: 479.98px;
 
 // general style <=>
 body {
-   background: $black;
-   color: $white;
    min-height: -webkit-fill-available;
-   line-height: 1.01;
+   height: 100svh;
+   padding: 20px;
+   background: $black;
+   line-height: 1;
    font-family: $fontFamily;
    font-size: $fontSize + px;
+   font-weight: 500;
+   @media only screen and (max-width:$mobileSmall) {
+      padding: 15px;
+   }
    //scroll block when open burger
    .lock & {
       overflow: hidden;
       touch-action: none;
    }
 }
-// wrapper <=>
-.wrapper {
-   min-height: 100%;
-   display: flex;
-   flex-direction: column;
-   overflow: hidden;
-}
-
-// container <=>
-.container {
-   max-width: $maxWidthContainer + px;
-   margin: 0 auto;
-   //fix for slider
-   > * {
-      min-width: 0;
-   }
-}
-
-// the footer to the bottom of the page <=>
-main {
-   padding-top: 80px;
-   flex: 1 1 auto;
-}
 
 // title  <=>
 .title {
-   font-family: $fontFamilyBlack;
-   font-size: 30px;
-   @media only screen and (max-width:$mobile) {
-      font-size: 25px;
-   }
+   font-weight: 800;
+   font-size: 40px;
 }
-
 // text  <=>
 .text {
    opacity: .9;
-   @media only screen and (max-width:$mobile) {
-      font-size: 16px;
-   }
 }
 
 // scroll bar <=>
-@media only screen and (max-width:$mobile) {
-   ::-webkit-scrollbar {
-      display: none;
-   }
-}
 ::-webkit-scrollbar {
-   width: 14px;
-}
-::-webkit-scrollbar-track {
-   background-color: $black;
-}
-::-webkit-scrollbar-thumb {
-   border-radius: 16px;
-   background-color: $white;
-}
-::-webkit-scrollbar-thumb:active {
-   background-color: #8f8f8f;
-}
-::-webkit-scrollbar-button {
    display: none;
+}
+*{
+//::-webkit-scrollbar {
+//   background-color: $white;
+//   width: 16px;
+//}
+//::-webkit-scrollbar-track {
+//   background-color: $white;
+//}
+//::-webkit-scrollbar-thumb {
+//   background-color: #a0a0a5;
+//   border-radius: 16px;
+//}
+//::-webkit-scrollbar-thumb:active {
+//   background-color: $black;
+//}
+//::-webkit-scrollbar-button {
+//   display: none;
+//}
 }
 
 // when copu text<=>
 ::selection {
-   color: $black;
-   background: $white;
+   color: $white;
+   background: $black;
 }
 
 //loading page style<=>
@@ -121,7 +86,7 @@ main {
    position: absolute;
    width: 100%;
    height: 100vh; 
-   background: $black;
+   background: $white;
    transition: .5s;
    display: flex;
    justify-content: center;
@@ -181,74 +146,46 @@ main {
       transform: scaleY(-1) rotate(-135deg);
    }
 }
-
-//noice effect <=>
-.old {
-   filter:sepia(1);
+//  wrapper <=>
+.wrapper {
+   height:100%;
    width: 100%;
+   border-radius: 20px;
+   box-shadow: inset ;
+   overflow: hidden;
+   position: relative;
+   box-shadow: inset 0 0 200px $black;
+}
+
+.noise {
+   background-image:radial-gradient(25.5% 100% at 100% 100%, #ecc94b 9%, rgba(235, 183, 63, 0.83) 24.17%, rgba(233, 164, 52, 0.67) 39.33%, rgba(232, 144, 41, 0.5) 54.5%, rgba(234, 122, 29, 0.33) 69.67%, rgba(255, 0, 0, 0) 100%), radial-gradient(100% 100% at 0% 50%, #f6e05e 19%, rgba(235, 182, 87, 0.75) 32%, rgba(222, 140, 77, 0.5) 45%, rgba(177, 56, 94, 0) 71%);
+   filter: blur(10px);
+   background-repeat: repeat;
    height: 100%;
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   background-image: url(../img/old-noice-effect/old.webp);
-   opacity: .05;
+   width: 100%;
+   opacity: 1;
+   position: absolute;
+   top: 0%;
+   left: 0%;
+   z-index: -1;
+   pointer-events: none;
+}
+.old {
+   background-image: url(../img/noise.png);
+   //background-image: url(../img/old.jpg);
    background-repeat: no-repeat;
    background-size: cover;
-   background-position: center center;
-   z-index: 300;
+   background-position-x: right;
+   position: absolute;
+   right: 0;
+   height: 100%;
+   width: 100%;
+   opacity: .4;
+   z-index: -1;
    pointer-events: none;
 }
-.noise {
-   animation: grain 6s steps(10) infinite;
-   background-image: url(../img/old-noice-effect/noise-full.png);
-   background-repeat: repeat;
-   height: 300%;
-   left: -50%;
-   opacity: .035;
-   position: fixed;
-   top: -100%;
-   width: 300%;
-   z-index:200;
-   pointer-events: none;
-}
-@keyframes grain {
-   0%, 100% {
-     transform: translate(0, 0);
- }
- 10% {
-     transform: translate(-5%, -10%);
- }
- 20% {
-     transform: translate(-15%, 5%);
- }
- 30% {
-     transform: translate(7%, -25%);
- }
- 40% {
-     transform: translate(-5%, 25%);
- }
- 50% {
-     transform: translate(-15%, 10%);
- }
- 60% {
-     transform: translate(15%, 0%);
- }
- 70% {
-     transform: translate(0%, 15%);
- }
- 80% {
-     transform: translate(3%, 35%);
- }
- 90% {
-     transform: translate(-10%, 10%);
- }
-}
+
 
 //import scss modules<=>
 @import "_header.scss";
 @import "_footer.scss";
-@import "_about.scss";
-@import "_gallery.scss";
-@import "_contacts.scss";
