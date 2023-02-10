@@ -80,6 +80,19 @@
       opacity: 1;
       transition: .3s;
    }
+   @media only screen and (max-width:550px) {
+      &__img_2{
+         display: none;
+      }
+      &__item:hover &__img_2{
+         display: none;
+         animation: none;
+      }
+      &__item_big:hover &__img_2{
+         display: none;
+         animation: none;
+      }
+   }
    
 }
 

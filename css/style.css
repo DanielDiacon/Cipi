@@ -998,6 +998,19 @@ main {
   opacity: 1;
   transition: 0.3s;
 }
+@media only screen and (max-width: 550px) {
+  .gallery__img_2 {
+    display: none;
+  }
+  .gallery__item:hover .gallery__img_2 {
+    display: none;
+    animation: none;
+  }
+  .gallery__item_big:hover .gallery__img_2 {
+    display: none;
+    animation: none;
+  }
+}
 
 .contacts__body {
   padding: 0 20px 20px 20px;
