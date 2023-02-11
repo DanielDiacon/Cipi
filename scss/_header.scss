@@ -37,7 +37,7 @@
 }
 
 .menu {
-   z-index: 4;
+   z-index: 100;
    &__burger {
       display: none;
    }
@@ -139,6 +139,7 @@ body.lock
       height: 60px;
       width: 100%;
       text-align: center;
+      z-index: 100;
    }
 
 }
