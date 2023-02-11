@@ -19,8 +19,6 @@ $white: #e1e1e5;
 $mainColor1: #0E0F11;
 
 // max width for container <=>
-$minWidth: 320;
-$maxWidth: 1920;
 $maxWidthContainer: 1250;
 
 // size gadjes for adapted and other <=>
@@ -32,6 +30,10 @@ $mobileSmall: 479.98px;
 @import "_null.scss";
 
 // general style <=>
+html{
+   scroll-behavior: smooth;
+   scroll-padding: 10px;
+}
 body {
    background: $black;
    color: $white;
@@ -50,7 +52,6 @@ body {
    min-height: 100%;
    display: flex;
    flex-direction: column;
-   overflow: hidden;
 }
 
 // container <=>
@@ -244,6 +245,14 @@ main {
  90% {
      transform: translate(-10%, 10%);
  }
+}
+@media only screen and (max-width:$mobileSmall) {
+   .old {
+      display: none;
+   }
+   .noise {
+      display: none;
+   }
 }
 
 //import scss modules<=>

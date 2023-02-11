@@ -55,7 +55,6 @@
       font-weight: 900;
       font-size: 30px;
    }
-
    &__link {
       padding-bottom: 5px;
       color: $white;
@@ -115,7 +114,6 @@ body.lock
    }
    &__body
    {
-      overflow: auto;
       position: fixed;
       right: 0;
       top: -100%;
