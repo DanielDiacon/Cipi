@@ -337,7 +337,7 @@ main {
 .header__logo {
   height: 40px;
   position: relative;
-  z-index: 5;
+  z-index: 101;
   margin: 15px;
 }
 .header__logo img {
