@@ -16,7 +16,6 @@ document.onclick = function (e) {
    }
 };
 
-
 // header show <=>
 var lastScrollTop = 0;
 navbar = document.getElementById('navbar');
@@ -30,11 +29,28 @@ window.addEventListener("scroll", function () {
    lastScrollTop = scrollTop;
 });
 
-
-
 // loading page <=>
 const loader = document.getElementById("loader");
 window.addEventListener("load", function () {
    loader.style.display = "none";
 });
 
+// swiper slider
+
+new Swiper('.swiper-container', {
+   pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+   },
+
+   // Navigation arrows
+   navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+   },
+
+   // And if we need scrollbar
+   scrollbar: {
+      el: '.swiper-scrollbar',
+   },
+});

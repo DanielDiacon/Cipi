@@ -3,30 +3,11 @@
    &__title {
       padding:20px;
    }
-   &__grid {
-      padding:20px;
-      display: grid; 
-      grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
-      gap: 0px; 
-      @media only screen and (max-width:$tablet) {
-         grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
-      }
-      @media only screen and (max-width:$mobile) {
-         grid-template-columns: repeat(auto-fit , minmax(150px,1fr));
-      }
-   }
    &__item {
       position: relative;
       overflow: hidden;
       padding-bottom: 100%;
-   }
-   &__item_big {
-      position: relative;
-      overflow: hidden;
-      padding-bottom: 100%;
-      z-index: 2;
-      grid-row: span 2;
-      grid-column: span 2;
+      width: 100%;
    }
    &__img {
       position: absolute;
@@ -37,29 +18,10 @@
       object-fit: cover;
       transition: .4s;
    }
-   &__img_2{
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width:100%;
-      height:100%;
-      object-fit: cover;
-      transition: .4s;
-   }
-   &__item:hover &__img_2{
-      display: block;
-      animation: CTA-glitch 3s infinite step-end;
-   }
-   &__item_big:hover &__img_2{
-      display: block;
-      animation: CTA-glitch 3s infinite step-end;
-   }
    .item__zoom{
       z-index:2;
       position: absolute;
       color: $black;
-      backdrop-filter: blur(10px) ;
       width: 30px;
       height: 30px;
       font-size: 20px;
@@ -68,6 +30,7 @@
       pointer-events: none;
       opacity: 0;
       transition: .3s;
+      background: hsla(0, 0%, 100%, 0.488);
       @media only screen and (max-width:$mobile) {
          opacity:1;
       }
@@ -80,19 +43,55 @@
       opacity: 1;
       transition: .3s;
    }
-   @media only screen and (max-width:550px) {
-      &__img_2{
-         display: none;
+}
+
+.gallery {
+   .swiper-container {
+      padding-bottom: 100px;
+      position: relative;
+   }
+   .swiper-slide {
+      padding:0 20px;
+      display: grid; 
+      grid-template-columns: repeat(auto-fit , minmax(250px,1fr));
+      gap: 20px; 
+      @media only screen and (max-width:$mobile) {
+         grid-template-columns: repeat(auto-fit , minmax(200px,1fr));
       }
-      &__item:hover &__img_2{
-         display: none;
-         animation: none;
-      }
-      &__item_big:hover &__img_2{
-         display: none;
-         animation: none;
+      @media only screen and (max-width:$mobileSmall) {
+         grid-template-columns: repeat(auto-fit , minmax(150px,1fr));
       }
    }
-   
+   .swiper-pagination {
+      position: absolute;
+      top: -60px;
+      right: 0;
+      text-align: right;
+      padding: 20px;
+      font-size: 30px;
+      @media only screen and (max-width:$mobile) {
+         top: calc(100% - 80px);
+         text-align: center;
+      }
+   }
+   .swiper-button-prev,
+   .swiper-button-next{
+      color: $white;
+      position: absolute;
+      top: calc(100% - 50px);
+      align-items: end;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-tap-highlight-color: transparent;
+   }
+   .swiper-button-prev {
+      left: 20px;
+   }
+   .swiper-button-next {
+      right: 20px;
+   }
 }
 
