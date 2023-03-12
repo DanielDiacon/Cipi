@@ -8,6 +8,7 @@
       overflow: hidden;
       padding-bottom: 100%;
       width: 100%;
+      z-index: 2000;
    }
    &__img {
       position: absolute;
@@ -63,6 +64,7 @@
       }
    }
    .swiper-pagination {
+      z-index: -1;
       position: absolute;
       top: -60px;
       right: 0;
