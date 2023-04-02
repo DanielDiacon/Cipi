@@ -6,7 +6,6 @@ dropdown.onclick = function () {
    dropdownMenu.classList.toggle('active');
    dropdown.classList.toggle('active');
    submenu.classList.toggle('active');
-
 };
 
 // menu burger <=>
@@ -37,6 +36,15 @@ document.onclick = function (e) {
       dropdown.classList.remove('active');
       submenu.classList.remove('active');
    }
+};
+
+// switch glitch effect in about section on image
+const glitchPlay = document.getElementById('glitch-play');
+const glitchEffect = document.getElementById('glitch-effect');
+
+glitchPlay.onclick = function () {
+   glitchPlay.classList.toggle('active');
+   glitchEffect.classList.toggle('active');
 };
 
 // header show <=>
