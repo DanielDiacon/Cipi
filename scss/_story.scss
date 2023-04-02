@@ -1,0 +1,10 @@
+
+.story {
+   padding: 20px;
+   &__title {
+      padding-bottom: 20px;
+   }
+   &__text {
+      opacity: .8;
+   }
+}

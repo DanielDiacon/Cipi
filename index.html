@@ -44,13 +44,20 @@
 <body>
    <div class="wrapper">
 
-      <!-- noice effect-->
-      <!--<div class="noise"></div>
-      <div class="old"></div>-->
-
       <!-- loading page -->
       <div class="loader" id="loader">
-         <div class="spinner"></div>
+         <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
       </div>
 
       <!--header-->
@@ -68,11 +75,29 @@
                         <li class="menu__item">
                            <a href="#about" class="menu__link">AbOut Me</a>
                         </li>
-                        <li class="menu__item">
-                           <a href="#gallery" class="menu__link">GalleRy</a>
+                        <li class="menu__item sub-menu" id="submenu">
+                           <p class="menu__link sub-menu__btn" id="dropdown">
+                              Portofolio
+                              <svg class="sub-menu__arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24">
+                                 <path fill="currentColor"
+                                    d="M11.7 15.3q-.475.475-1.087.213T10 14.575v-5.15q0-.675.613-.938T11.7 8.7l2.6 2.6q.15.15.225.325T14.6 12q0 .2-.075.375t-.225.325l-2.6 2.6Z" />
+                              </svg>
+                           </p>
+                           <ul class="sub-menu__list" id="dropdownMenu">
+                              <li class="sub-menu__item">
+                                 <a href="graphic-design.html" class="sub-menu__link">Posters</a>
+                              </li>
+                              <li class="sub-menu__item">
+                                 <a href="web-projects.html" class="sub-menu__link">Logos</a>
+                              </li>
+                              <li class="sub-menu__item">
+                                 <a href="web-projects.html" class="sub-menu__link">Photoshop</a>
+                              </li>
+                           </ul>
                         </li>
                         <li class="menu__item">
-                           <a href="#contacts" class="menu__link">ConTacts</a>
+                           <button class="menu__link btn">Contacts</button>
                         </li>
                      </ul>
                   </nav>
@@ -89,23 +114,117 @@
                <div class="about__body">
                   <div class="about__description">
                      <div class="about__title title">
-                        Hey, My name is Cipi and I'm a graphic designer</div>
+                        Hi, my name's Ciprian and I'm a professional graphic designer.
+                     </div>
                      <div class="about__text text">
-                        I'm a designer already with some experience and I have some finished projects that you can
-                        see in the gallery . I also use photoshop and adobe illustrator to create projects.
+                        Through my projects I can make your business expand and grow. I want to make people laugh, cry,
+                        feel pleasant emotions and remember pleasant moments.
                      </div>
                   </div>
                   <div class="about__img-wrapper">
                      <div class="about__img">
-                        <img class="about__img_1" src="img/illustrations/why-do-i-fell-this.webp">
-                        <img class="about__img_2" src="img/illustrations/why-do-i-fell-this.webp">
+                        <img class="about__img_1" src="img/cipi.jpg">
+                        <img class="about__img_2" src="img/cipi.jpg">
                      </div>
                   </div>
                </div>
             </div>
          </section>
-
-         <section class="gallery" id="gallery">
+         <section class="story">
+            <div class="container">
+               <div class="story__title title">My Journey to Becoming a Graphic Designer.</div>
+               <p class="story__text text">
+                  Hello, I'm Ciprian, and I discovered my passion for graphic design after stumbling upon a few vintage
+                  posters on Pinterest. The stunning visuals and clever messaging immediately caught my attention, and I
+                  became fascinated by the artistry and creativity that went into their creation. From that moment on, I
+                  knew I wanted to pursue a career in graphic design.
+                  <br>
+                  <br>
+                  To turn my dream into a reality, I enrolled in several courses to learn the fundamentals of Graphic
+                  Design. These courses provided me with a solid foundation in design principles, color theory,
+                  typography, and much more. As I delved deeper into the world of graphic design, I realized that it was
+                  not just a hobby, but a way of life. Every design challenge presented a new opportunity for me to flex
+                  my creative muscles and push myself to new heights.
+                  <br>
+                  <br>
+                  It's a dream come true, and I feel grateful every day to be doing something that I love. I am
+                  constantly inspired by the endless possibilities of graphic design, and I am committed to continuing
+                  my growth and development as a designer for many years to come.
+               </p>
+            </div>
+         </section>
+         <section class="skills">
+            <div class="container">
+               <div class="skills__body">
+                  <div class="skills__title title">Skills</div>
+                  <div class="skills__grid">
+                     <div class="skills__item">
+                        <div class="skills__top">
+                           <div class="skills__row">
+                              <div class="skills__logo">
+                                 <img src="img/photoshop-logo.png" alt="">
+                              </div>
+                              <div class="skills__name">Photoshop</div>
+                           </div>
+                           <div class="skills__progressbar" style="--width-progress:90%;"></div>
+                        </div>
+                        <div class="skills__description">
+                           Photoshop is a photo editing software that allows you to manipulate and enhance images. It is
+                           used to adjust colors, remove unwanted elements, and create digital artwork.
+                        </div>
+                     </div>
+                     <div class="skills__item">
+                        <div class="skills__top">
+                           <div class="skills__row">
+                              <div class="skills__logo">
+                                 <img src="img/illustrator-logo.png" alt="">
+                              </div>
+                              <div class="skills__name">Illustrator</div>
+                           </div>
+                           <div class="skills__progressbar" style="--width-progress:90%;"></div>
+                        </div>
+                        <div class="skills__description">
+                           Illustrator is a vector graphics editor used to create digital illustrations, logos, and
+                           other graphic designs. Unlike Photoshop, which deals with pixels, Illustrator works with
+                           mathematical equations to create scalable images.
+                        </div>
+                     </div>
+                     <div class="skills__item">
+                        <div class="skills__top">
+                           <div class="skills__row">
+                              <div class="skills__logo">
+                                 <img src="img/indesign-logo.png" alt="">
+                              </div>
+                              <div class="skills__name">InDesign</div>
+                           </div>
+                           <div class="skills__progressbar" style="--width-progress:60%;"></div>
+                        </div>
+                        <div class="skills__description">
+                           InDesign is a desktop publishing software used to create layouts for print and digital media.
+                           It is commonly used to create books, brochures, magazines, and other types of print media.
+                        </div>
+                     </div>
+                     <div class="skills__item">
+                        <div class="skills__top">
+                           <div class="skills__row">
+                              <div class="skills__logo logo-png">
+                                 <img src="img/afinity-logo.png" alt="">
+                              </div>
+                              <div class="skills__name">Affinity</div>
+                           </div>
+                           <div class="skills__progressbar" style="--width-progress:66%;"></div>
+                        </div>
+                        <div class="skills__description">
+                           Affinity is a suite of graphic design software that includes Photo (similar to Photoshop),
+                           Designer (similar to Illustrator), and Publisher (similar to InDesign). It is a more
+                           affordable alternative to the Adobe Creative Suite.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--<section class="gallery" id="gallery">
             <div class="container">
                <div class="gallery__body">
                   <div class="gallery__title title">Gallery , Projects</div>
@@ -458,7 +577,6 @@
                      </div>
                      <div class="gallery__pagination swiper-pagination"></div>
 
-                     <!-- If we need navigation buttons -->
                      <div class="gallery__button swiper-button-prev"></div>
                      <div class="gallery__button swiper-button-next"></div>
 
@@ -466,19 +584,7 @@
 
                </div>
             </div>
-         </section>
-
-         <section class="contacts" id="contacts">
-            <div class="container">
-               <div class="contacts__body">
-                  <div class="contacts__title title">Contacts</div>
-                  <div class="contacts__text text">
-                     To contact me you can access one of the links in the bottom right corner of the pages.
-                  </div>
-               </div>
-            </div>
-         </section>
-
+         </section>-->
       </main>
 
       <!-- footer -->
@@ -495,7 +601,7 @@
                            d="M12 2c2.717 0 3.056.01 4.122.06c1.065.05 1.79.217 2.428.465c.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.047 1.066.06 1.405.06 4.122c0 2.717-.01 3.056-.06 4.122c-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772a4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465c-1.066.047-1.405.06-4.122.06c-2.717 0-3.056-.01-4.122-.06c-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153a4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122c.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0a1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6a3 3 0 0 1 0-6z" />
                      </svg>
                   </a>
-                  <a href="mailto:" style="cursor:no-drop">
+                  <a href="mailta:cipax321@gmail.com">
                      <div class="footer__link">Gmail</div>
                      <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                         viewBox="0 0 24 24">
@@ -508,6 +614,51 @@
          </div>
       </footer>
 
+   </div>
+
+   <!-- contacts popup -->
+   <div class="popup">
+      <div class="inner">
+         <svg class="close" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+            <path fill="currentColor"
+               d="M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504L738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512L828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496L285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512L195.2 285.696a64 64 0 0 1 0-90.496z" />
+         </svg>
+         <div class="popup__title title">Contacts</div>
+         <div class="popup__networks">
+            <a class="popup__link instagram" href="https://www.instagram.com/_sweetiecipi/">
+               <svg class="popup__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                     d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z" />
+               </svg>
+               <div class="popup__social title">Instagram</div>
+            </a>
+            <a class="popup__link gmail" href="mailta:cipax321@gmail.com">
+               <svg class="popup__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                     d="m18.73 5.41l-1.28 1L12 10.46L6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z" />
+               </svg>
+               <div class="popup__social title">Gmail</div>
+            </a>
+            <a class="popup__link telegram" href="https://t.me/cipfit">
+               <svg class="popup__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g fill="none" fill-rule="evenodd">
+                     <path
+                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                     <path fill="currentColor"
+                        d="M19.777 4.43a1.5 1.5 0 0 1 2.062 1.626l-2.268 13.757c-.22 1.327-1.676 2.088-2.893 1.427c-1.018-.553-2.53-1.405-3.89-2.294c-.68-.445-2.763-1.87-2.507-2.884c.22-.867 3.72-4.125 5.72-6.062c.785-.761.427-1.2-.5-.5c-2.303 1.738-5.998 4.381-7.22 5.125c-1.078.656-1.64.768-2.312.656c-1.226-.204-2.363-.52-3.291-.905c-1.254-.52-1.193-2.244-.001-2.746l17.1-7.2Z" />
+                  </g>
+               </svg>
+               <div class="popup__social title">Telegram</div>
+            </a>
+            <a class="popup__link facebook" href="https://www.facebook.com/ciprian.marandici/">
+               <svg class="popup__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                     d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z" />
+               </svg>
+               <div class="popup__social title">Facebook</div>
+            </a>
+         </div>
+      </div>
    </div>
 </body>
 

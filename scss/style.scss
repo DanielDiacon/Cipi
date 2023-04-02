@@ -74,7 +74,7 @@ main {
 // title  <=>
 .title {
    font-family: $fontFamilyBlack;
-   font-size: 30px;
+   font-size: 35px;
    @media only screen and (max-width:$mobile) {
       font-size: 25px;
    }
@@ -111,154 +111,13 @@ main {
    display: none;
 }
 
-// when copu text<=>
-::selection {
-   color: $black;
-   background: $white;
-}
-
-//loading page style<=>
-.loader{
-   z-index: 200;
-   position: absolute;
-   width: 100%;
-   height: 100vh; 
-   background: $black;
-   transition: .5s;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.spinner {
-   width: 56px;
-   height: 56px;
-   border-radius: 50%;
-   border: 9px solid $white;
-   animation: spinner-bulqg1 0.8s infinite linear alternate,
-        spinner-oaa3wk 1.6s infinite linear;
-}
-@keyframes spinner-bulqg1 {
-   0% {
-      clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
-   }
-
-   12.5% {
-      clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
-   }
-
-   25% {
-      clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
-   }
-
-   50% {
-      clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
-   }
-
-   62.5% {
-      clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
-   }
-
-   75% {
-      clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);
-   }
-
-   100% {
-      clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
-   }
-}
-@keyframes spinner-oaa3wk {
-   0% {
-      transform: scaleY(1) rotate(0deg);
-   }
-
-   49.99% {
-      transform: scaleY(1) rotate(135deg);
-   }
-
-   50% {
-      transform: scaleY(-1) rotate(0deg);
-   }
-
-   100% {
-      transform: scaleY(-1) rotate(-135deg);
-   }
-}
-
-//noice effect <=>
-//.old {
-//   filter:sepia(1);
-//   width: 100%;
-//   height: 100%;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   background-image: url(../img/old-noice-effect/old.webp);
-//   opacity: .05;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-position: center center;
-//   z-index: 300;
-//   pointer-events: none;
-//}
-//.noise {
-//   animation: grain 6s steps(10) infinite;
-//   background-image: url(../img/old-noice-effect/noise-full.png);
-//   background-repeat: repeat;
-//   height: 300%;
-//   left: -50%;
-//   opacity: .035;
-//   position: fixed;
-//   top: -100%;
-//   width: 300%;
-//   z-index:200;
-//   pointer-events: none;
-//}
-//@keyframes grain {
-//   0%, 100% {
-//     transform: translate(0, 0);
-// }
-// 10% {
-//     transform: translate(-5%, -10%);
-// }
-// 20% {
-//     transform: translate(-15%, 5%);
-// }
-// 30% {
-//     transform: translate(7%, -25%);
-// }
-// 40% {
-//     transform: translate(-5%, 25%);
-// }
-// 50% {
-//     transform: translate(-15%, 10%);
-// }
-// 60% {
-//     transform: translate(15%, 0%);
-// }
-// 70% {
-//     transform: translate(0%, 15%);
-// }
-// 80% {
-//     transform: translate(3%, 35%);
-// }
-// 90% {
-//     transform: translate(-10%, 10%);
-// }
-//}
-//@media only screen and (max-width:$mobileSmall) {
-//   .old {
-//      display: none;
-//   }
-//   .noise {
-//      display: none;
-//   }
-//}
 
 //import scss modules<=>
 @import "_header.scss";
 @import "_footer.scss";
+@import "_loading.scss";
 @import "_about.scss";
 @import "_gallery.scss";
-@import "_contacts.scss";
+@import "_contact.scss";
+@import "_skills.scss";
+@import "_story.scss";
