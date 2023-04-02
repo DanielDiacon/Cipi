@@ -606,6 +606,7 @@ main {
   background: #0c0c0f;
   overflow: hidden;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 .about__switch.active .about__icon {
   transform: translateY(-37px);
@@ -1206,6 +1207,11 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
   gap: 30px;
+}
+@media only screen and (max-width: 991.98px) {
+  .skills__grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
 }
 @media only screen and (max-width: 479.98px) {
   .skills__grid {

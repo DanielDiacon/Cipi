@@ -54,6 +54,7 @@
       background: $black;
       overflow: hidden;
       cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
    }
    &__switch.active  &__icon{
       transform: translateY(-37px);

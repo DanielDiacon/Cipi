@@ -9,6 +9,9 @@
       display: grid;
       grid-template-columns: repeat(auto-fit , minmax(430px,1fr));
       gap: 30px; 
+      @media only screen and (max-width:$tablet) {
+         grid-template-columns: repeat(auto-fit , minmax(350px,1fr));
+      }
       @media only screen and (max-width:$mobileSmall) {
          grid-template-columns: repeat(auto-fit , minmax(300px,1fr));
       }
