@@ -16,14 +16,14 @@
    <!-- og -->
    <meta name="og:site_name" content="cipi">
    <meta name="og:type" content="website">
-   <meta propert="og:title" content="Cipi's Gallery">
+   <meta propert="og:title" content="Cyprian's posters">
    <meta name="og:description"
       content="This is the site where you will find all the projects of the graphic designer Cipi and his contacts.">
-   <meta name="og:site_name" content="Cipi's Gallery">
+   <meta name="og:site_name" content="Cyprian's posters">
    <meta name="og:type" content="website">
    <meta name="og:image" content="img/all-illustrations.png">
    <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:title" content="Cipi's Gallery">
+   <meta name="twitter:title" content="Cyprian's posters">
    <meta name="twitter:description"
       content="This is the site where you will find all the projects of the graphic designer Cipi and his contacts.">
    <meta name="twitter:image:src" content="img/all-illustrations.png">
@@ -31,12 +31,14 @@
    <!-- style css -->
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/lightbox.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
    <!-- javascript code -->
    <script defer src="js/lightbox-plus-jquery.js"></script>
    <script defer src="js/script.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <title>Cipi's Gallery</title>
+   <title>Cyprian's posters</title>
 </head>
 
 <body>
@@ -71,7 +73,10 @@
                   <nav class="menu__body" id="menu">
                      <ul class="menu__list">
                         <li class="menu__item">
-                           <a href="#about" class="menu__link">AbOut Me</a>
+                           <a href="index.html" class="menu__link">home</a>
+                        </li>
+                        <li class="menu__item">
+                           <a href="index.html#about" class="menu__link">AbOut Me</a>
                         </li>
                         <li class="menu__item sub-menu" id="submenu">
                            <p class="menu__link sub-menu__btn" id="dropdown">
@@ -105,136 +110,69 @@
       </header>
 
       <!--main-->
-
       <main class="main" id="about">
-         <section class="about">
+
+         <section class="gallery" id="gallery">
             <div class="container">
-               <div class="about__body">
-                  <div class="about__description">
-                     <div class="about__title title">
-                        Hi, my name's Ciprian and I'm a professional graphic designer.
-                     </div>
-                     <div class="about__text text">
-                        Through my projects I can make your business expand and grow. I want to make people laugh, cry,
-                        feel pleasant emotions and remember pleasant moments.
-                     </div>
-                  </div>
-                  <div class="about__img-wrapper">
-                     <div class="about__img">
-                        <div class="about__switch" id="glitch-play">
-                           <svg class="about__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                              viewBox="0 0 24 24">
-                              <path fill="currentColor"
-                                 d="M14 17V7q0-.825.588-1.413T16 5q.825 0 1.413.588T18 7v10q0 .825-.588 1.413T16 19q-.825 0-1.413-.588T14 17Zm-8 0V7q0-.825.588-1.413T8 5q.825 0 1.413.588T10 7v10q0 .825-.588 1.413T8 19q-.825 0-1.413-.588T6 17Z" />
-                           </svg>
-                           <svg class="about__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                              viewBox="0 0 24 24">
-                              <path fill="currentColor"
-                                 d="M9.525 18.025q-.5.325-1.012.038T8 17.175V6.825q0-.6.513-.888t1.012.038l8.15 5.175q.45.3.45.85t-.45.85l-8.15 5.175Z" />
-                           </svg>
-                        </div>
-                        <img class="about__img_1" src="img/cipi.jpg" id="glitch-effect">
-                        <img class="about__img_2" src="img/cipi.jpg">
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <section class="story">
-            <div class="container">
-               <div class="story__title title">My Journey to Becoming a Graphic Designer.</div>
-               <p class="story__text text">
-                  Hello, I'm Ciprian, and I discovered my passion for graphic design after stumbling upon a few vintage
-                  posters on Pinterest. The stunning visuals and clever messaging immediately caught my attention, and I
-                  became fascinated by the artistry and creativity that went into their creation. From that moment on, I
-                  knew I wanted to pursue a career in graphic design.
-                  <br>
-                  <br>
-                  To turn my dream into a reality, I enrolled in several courses to learn the fundamentals of Graphic
-                  Design. These courses provided me with a solid foundation in design principles, color theory,
-                  typography, and much more. As I delved deeper into the world of graphic design, I realized that it was
-                  not just a hobby, but a way of life. Every design challenge presented a new opportunity for me to flex
-                  my creative muscles and push myself to new heights.
-                  <br>
-                  <br>
-                  It's a dream come true, and I feel grateful every day to be doing something that I love. I am
-                  constantly inspired by the endless possibilities of graphic design, and I am committed to continuing
-                  my growth and development as a designer for many years to come.
-               </p>
-            </div>
-         </section>
-         <section class="skills">
-            <div class="container">
-               <div class="skills__body">
-                  <div class="skills__title title">My Skills in Graphic Design</div>
-                  <div class="skills__grid">
-                     <div class="skills__item">
-                        <div class="skills__top">
-                           <div class="skills__row">
-                              <div class="skills__logo">
-                                 <img src="img/photoshop-logo.png" alt="">
+               <div class="gallery__body">
+                  <div class="gallery__title title">Gallery , Projects</div>
+
+                  <div class="gallery__container swiper-container">
+                     <div class="gallery__wrapper swiper-wrapper">
+                        <div class="gallery__grid swiper-slide">
+
+                           <div class="gallery__item">
+                              <a href="img/logos/cipi-inst-logo.jpg" data-lightbox="gallery">
+                                 <img src="img/logos/cipi-inst-logo.jpg" class="gallery__img">
+                              </a>
+                              <div class="item__zoom">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                       stroke-linejoin="round" stroke-width="4"
+                                       d="m6 6l10 9.9m-10 26L16 32m26 9.9L32.1 32m9.8-26L32 15.9M33 6h9v9m0 18v9h-9m-18 0H6v-9m0-18V6h9" />
+                                 </svg>
                               </div>
-                              <div class="skills__name">Photoshop</div>
                            </div>
-                           <div class="skills__progressbar" style="--width-progress:100%;"></div>
-                        </div>
-                        <div class="skills__description">
-                           Photoshop is a photo editing software that allows you to manipulate and enhance images. It is
-                           used to adjust colors, remove unwanted elements, and create digital artwork.
-                        </div>
-                     </div>
-                     <div class="skills__item">
-                        <div class="skills__top">
-                           <div class="skills__row">
-                              <div class="skills__logo">
-                                 <img src="img/illustrator-logo.png" alt="">
+
+                           <div class="gallery__item">
+                              <a href="img/logos/old-cipi-logo.jpg" data-lightbox="gallery">
+                                 <img src="img/logos/old-cipi-logo.jpg" class="gallery__img">
+                              </a>
+                              <div class="item__zoom">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                       stroke-linejoin="round" stroke-width="4"
+                                       d="m6 6l10 9.9m-10 26L16 32m26 9.9L32.1 32m9.8-26L32 15.9M33 6h9v9m0 18v9h-9m-18 0H6v-9m0-18V6h9" />
+                                 </svg>
                               </div>
-                              <div class="skills__name">Illustrator</div>
                            </div>
-                           <div class="skills__progressbar" style="--width-progress:100%;"></div>
-                        </div>
-                        <div class="skills__description">
-                           Illustrator is a vector graphics editor used to create digital illustrations, logos, and
-                           other graphic designs. Unlike Photoshop, which deals with pixels, Illustrator works with
-                           mathematical equations to create scalable images.
-                        </div>
-                     </div>
-                     <div class="skills__item">
-                        <div class="skills__top">
-                           <div class="skills__row">
-                              <div class="skills__logo">
-                                 <img src="img/indesign-logo.png" alt="">
+
+                           <div class="gallery__item">
+                              <a href="img/logos/retro.webp" data-lightbox="gallery">
+                                 <img src="img/logos/retro.webp" class="gallery__img">
+                              </a>
+                              <div class="item__zoom">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48">
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                       stroke-linejoin="round" stroke-width="4"
+                                       d="m6 6l10 9.9m-10 26L16 32m26 9.9L32.1 32m9.8-26L32 15.9M33 6h9v9m0 18v9h-9m-18 0H6v-9m0-18V6h9" />
+                                 </svg>
                               </div>
-                              <div class="skills__name">InDesign</div>
                            </div>
-                           <div class="skills__progressbar" style="--width-progress:90%;"></div>
-                        </div>
-                        <div class="skills__description">
-                           InDesign is a desktop publishing software used to create layouts for print and digital media.
-                           It is commonly used to create books, brochures, magazines, and other types of print media.
                         </div>
                      </div>
-                     <div class="skills__item">
-                        <div class="skills__top">
-                           <div class="skills__row">
-                              <div class="skills__logo logo-png">
-                                 <img src="img/afinity-logo.png" alt="">
-                              </div>
-                              <div class="skills__name">Affinity</div>
-                           </div>
-                           <div class="skills__progressbar" style="--width-progress:86%;"></div>
-                        </div>
-                        <div class="skills__description">
-                           Affinity is a suite of graphic design software that includes Photo (similar to Photoshop),
-                           Designer (similar to Illustrator), and Publisher (similar to InDesign). It is a more
-                           affordable alternative to the Adobe Creative Suite.
-                        </div>
-                     </div>
+                     <div class="gallery__pagination swiper-pagination"></div>
+                     <div class="gallery__button swiper-button-prev"></div>
+                     <div class="gallery__button swiper-button-next"></div>
                   </div>
                </div>
             </div>
          </section>
       </main>
+
 
       <!-- footer -->
       <footer class="footer">

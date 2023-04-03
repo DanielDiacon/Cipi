@@ -477,7 +477,7 @@ main {
   height: 120%;
   background: #e1e1e5;
   transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
-  animation: spinner-fzua35 1s calc(var(--delay) * 1s) ease-in-out;
+  animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease-in-out;
 }
 
 .spinner div:nth-child(1) {
@@ -1020,6 +1020,7 @@ main {
   padding-bottom: 100%;
   width: 100%;
   z-index: 2000;
+  border-radius: 20px;
 }
 .gallery__img {
   position: absolute;
@@ -1034,16 +1035,18 @@ main {
 .gallery .item__zoom {
   z-index: 2;
   position: absolute;
-  color: #0c0c0f;
-  width: 30px;
+  color: #e1e1e5;
+  top: 10px;
+  left: 10px;
   height: 30px;
+  width: 30px;
+  border-radius: 10px;
   font-size: 20px;
-  margin: 5px;
   padding: 5px;
   pointer-events: none;
   opacity: 0;
   transition: 0.3s;
-  background: hsla(0, 0%, 100%, 0.488);
+  background: #0c0c0f;
 }
 @media only screen and (max-width: 767.98px) {
   .gallery .item__zoom {

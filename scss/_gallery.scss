@@ -9,6 +9,7 @@
       padding-bottom: 100%;
       width: 100%;
       z-index: 2000;
+      border-radius: 20px;
    }
    &__img {
       position: absolute;
@@ -22,16 +23,18 @@
    .item__zoom{
       z-index:2;
       position: absolute;
-      color: $black;
-      width: 30px;
+      color: $white;
+      top: 10px;
+      left: 10px;
       height: 30px;
+      width: 30px;
+      border-radius: 10px;
       font-size: 20px;
-      margin: 5px;
       padding: 5px;
       pointer-events: none;
       opacity: 0;
       transition: .3s;
-      background: hsla(0, 0%, 100%, 0.488);
+      background: $black;
       @media only screen and (max-width:$mobile) {
          opacity:1;
       }

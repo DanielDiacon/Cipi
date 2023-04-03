@@ -1,3 +1,5 @@
+
+
 // dropdown portofolio
 let submenu = document.getElementById('submenu');
 let dropdown = document.getElementById('dropdown');
@@ -22,12 +24,12 @@ burger.onclick = function () {
    submenu.classList.remove('active');
 };
 document.onclick = function (e) {
-   if (e.target.id !== 'burger' 
-   && e.target.classList !== 'menu' 
-   && e.target.id !== 'logo'
-   && e.target.id !== 'submenu'
-   && e.target.id !== 'dropdown'
-   && e.target.id !== 'dropdownMenu'
+   if (e.target.id !== 'burger'
+      && e.target.classList !== 'menu'
+      && e.target.id !== 'logo'
+      && e.target.id !== 'submenu'
+      && e.target.id !== 'dropdown'
+      && e.target.id !== 'dropdownMenu'
    ) {
       burger.classList.remove('active');
       menu.classList.remove('active');
@@ -42,7 +44,7 @@ document.onclick = function (e) {
 const glitchPlay = document.getElementById('glitch-play');
 const glitchEffect = document.getElementById('glitch-effect');
 
-glitchPlay.onclick = function () {
+if (glitchPlay) glitchPlay.onclick = function () {
    glitchPlay.classList.toggle('active');
    glitchEffect.classList.toggle('active');
 };
@@ -116,5 +118,3 @@ new Swiper('.swiper-container', {
       el: '.swiper-scrollbar',
    },
 });
-
-
